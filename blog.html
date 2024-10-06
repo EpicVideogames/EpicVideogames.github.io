@@ -1,62 +1,78 @@
 <!DOCTYPE html>
-<nav>
-    <a href="/home.html"><i class="fas fa-home"></i> Home</a>
-    <a href="/blog.html"><i class="fas fa-blog"></i> Blog</a>
-</nav>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Blog in the World - Ivan Lin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
             color: #333;
+            padding-top: 100px; /* Space for fixed header */
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 0.5rem;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin-left: 0.5rem;
+            background-color: #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #bbb;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
-        header {
-            background-color: #f4f4f4;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav {
-            margin-top: 1rem;
-        }
-        nav a {
-            color: #333;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
-            background-color: #ddd;
-            border-radius: 5px;
-        }
-        nav a:hover {
-            background-color: #bbb;
-        }
         h1 {
             font-size: 2.5rem;
             color: #2c3e50;
+            margin-bottom: 1rem;
         }
         .blog-content {
             margin-top: 2rem;
         }
         @media (max-width: 600px) {
-            .container {
-                padding: 10px;
+            body {
+                padding-top: 120px; /* Increased space for header on mobile */
+            }
+            header {
+                text-align: center;
+            }
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            nav a {
+                margin: 0.25rem;
             }
             h1 {
                 font-size: 2rem;
-            }
-            nav a {
-                display: inline-block;
-                margin: 0.25rem;
             }
         }
     </style>
@@ -65,14 +81,15 @@
     <header>
         <h1>Best Blog in the World</h1>
         <nav>
-            <a href="/">Home</a>
-            <a href="/blog.html">Blog</a>
+            <a href="/home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="/blog.html"><i class="fas fa-blog"></i> Blog</a>
         </nav>
     </header>
     <div class="container">
         <div class="blog-content">
             <!-- Your blog posts will go here -->
-            <p>Welcome to the best blog in the world! Content coming soon...</p>
+            <p>Welcome to the best blog in the world! Content coming soon...
+            blog is the goat blog</p>
         </div>
     </div>
 </body>
